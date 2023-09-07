@@ -175,8 +175,8 @@
     // checkInts(2, 6) // should return ["even", "even"]
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
-    const checkInts = (...someEnts) => {
-      const entsArr = [...someEnts]
+    const checkInts = (...someEnts) => { // per the solution video "...variable" turns the arguments into an array.
+      const entsArr = [...someEnts] // based on the above, the array isn't needed here.
       if (!entsArr.length) {
         return "pass some arguments, yo!"
       }
@@ -193,6 +193,20 @@
         })
         return entsResult
     }
+
+    // a MUCH more efficient, smart, way to do the above (with less code) is here:
+
+    // const checkInts = (...someEnts) => {
+    //   if (!someEnts.length) {
+    //     return "pass some arguments, yo!"
+    //   }
+    //   return someEnts.map(ent => {
+    //     if (num % 2 === 0) {
+    //       return "even"
+    //     }
+    //     return "odd"
+    //   })
+    // }
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
